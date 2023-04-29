@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01 select DOM</title>
+  </head>
+  <body>
+    <h1 id="headder">Hello IJSE students!</h1>
+    <h2 class="headder2">HTML Module</h2>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum nam, earum
+      dolorum nesciunt nisi iste accusamus laudantium cupiditate maxime atque
+      officia fugiat nihil itaque iusto quisquam velit? Culpa, iusto pariatur?
+    </p>
+    <h2>CSS Module</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis iste
+      accusamus reiciendis neque aspernatur ea nostrum ut earum ipsa
+      dignissimos! Iusto assumenda laudantium fugiat, quam perferendis
+      reiciendis culpa quaerat vitae?
+    </p>
+    <h2>JS Module</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
+      ipsum minus exercitationem odit ut pariatur, deserunt voluptates fugit
+      distinctio rem in soluta iste fugiat labore voluptatem recusandae suscipit
+      sint nisi!
+    </p>
+    <ul>
+      <li>Java</li>
+      <li>JS</li>
+      <li>CSS</li>
+      <li>HTML</li>
+    </ul>
+
+    <!-- <form action="">
+      <input type="text" name="username" /><br /><br />
+      <input type="text" name="password" /><br /><br />
+      <button>click me</button>
+    </form> -->
+
+    <input type="text" name="text" id="input" /><br /><br />
+    <button id="btn">click me</button>
+    <img src="" alt="image" id="img" />
+
+    <script>
+      // getElementsByTagName - search element by tag name(span,div)
+      document.getElementsByTagName("h1");
+
+      // getElementById - search element by element_id
+      document.getElementById("headder");
+
+      // getElementByClassName - search element by class name
+      document.getElementsByClassName("headder2");
+
+      // getElementByName - search element by name attribute
+      document.getElementsByName("password");
+
+      // querySelector - return first element
+      document.querySelector("#headder");
+
+      // QuerySelectorAll - return all elements
+      document.querySelector("p");
+
+      //   ----------------------------------------------------------------------------------------------------------------------------
+
+      //   innerText - we can get text in selected element
+      document.getElementsByTagName("h2")[0].innerText;
+
+      // we can change inner text
+      document.getElementsByTagName("h2")[0].innerText = "HTML5 Module";
+
+      //   we can set placeholder
+      //   document
+      //     .getElementsByName("username")[0]
+      //     .setAttribute("placeholder", "username");
+
+      //   document
+      //     .getElementsByName("password")[0]
+      //     .setAttribute("placeholder", "password");
+
+      document.querySelector("#btn").addEventListener("click", function () {
+        document
+          .querySelector("#img")
+          .setAttribute("src", document.getElementsByName("text")[0].value);
+      });
+    </script>
+  </body>
+</html>
