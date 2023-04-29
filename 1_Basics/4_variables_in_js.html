@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>variables in js</title>
+  </head>
+  <body>
+    <script>
+      // Variables
+      // ----------------------------------------------------------------------
+
+      //   var , let , const > Variable declarattion
+      //   name > variable name
+      //   "Piumika" > Value
+      var name = "Piumika";
+      var x = 1;
+      var y = true;
+      var z = 1.5;
+
+      console.log(name);
+      console.log(x);
+      console.log(y);
+      console.log(z);
+
+      console.log(typeof name);
+      console.log(typeof x);
+      console.log(typeof y);
+      console.log(typeof z);
+
+      //   JS has * datatypes
+      // ---------------------------------------------------
+
+      //   01.toString
+      //   02.Number
+      //   03.Bigint
+      //   04.Boolean
+      //   05.Undifined
+      //   06.Null
+      //   07.Symbol
+      //   08.Object
+
+      var a = "hi";
+
+      {
+        var b = "hello";
+        console.log(a);
+      }
+
+      console.log(b); //we can access out of scope b with "var"    * this is a issue in JS
+
+      //   -----------------------------------------------------------------------------------
+      //   2015 - let & const(for below problem)
+      // --------------------------------------------
+
+      {
+        let name = "Piumika";
+        console.log("name 1 : " + name);
+      }
+
+      console.log("name 2 : " + name); //We can not access out of scope with "let"
+
+      // ----------------------------------------------------------------------------------------
+
+      {
+        const name = "Piumika";
+        console.log("name 1 : " + name);
+      }
+
+      console.log("name 2 : " + name); //We can not access out of scope with "const"
+    </script>
+  </body>
+</html>
