@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity</title>
+    <style>
+      button {
+        width: 50px;
+        height: 50px;
+      }
+      button:nth-child(1) {
+        background-color: red;
+      }
+
+      button:nth-child(2) {
+        background-color: blue;
+      }
+
+      button:nth-child(3) {
+        background-color: yellow;
+      }
+
+      button:nth-child(4) {
+        background-color: rosybrown;
+      }
+
+      button:nth-child(5) {
+        background-color: pink;
+      }
+
+      button:nth-child(6) {
+        background-color: black;
+      }
+
+      button:nth-child(7) {
+        background-color: green;
+      }
+
+      button:nth-child(8) {
+        background-color: yellow;
+      }
+
+      button:nth-child(9) {
+        background-color: greenyellow;
+      }
+
+      button:nth-child(10) {
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn" id="red"></button>
+    <button class="btn" id="blue"></button>
+    <button class="btn" id="yellow"></button>
+    <button class="btn" id="rosybrown"></button>
+    <button class="btn" id="pink"></button>
+    <button class="btn" id="black"></button>
+    <button class="btn" id="green"></button>
+    <button class="btn" id="yellow"></button>
+    <button class="btn" id="greenyellow"></button>
+    <button class="btn" id="grey"></button>
+
+    <script src="../assets/lib/jQuery/jquery-3.6.4.min.js"></script>
+    <script>
+      $(".btn").click(function (event) {
+        $("body").css("background", event.target.id);
+      });
+      //   document.getElementById("btn-1").addEventListener("click", function () {
+      //     $("body").css("background", "red");
+      //   });
+
+      //   document.getElementById("btn-2").addEventListener("click", function () {
+      //     $("body").css("background", "blue");
+      //   });
+
+      //   document.getElementById("btn-3").addEventListener("click", function () {
+      //     $("body").css("background", "yellow");
+      //   });
+
+      //   document.getElementById("btn-4").addEventListener("click", function () {
+      //     $("body").css("background", "rosybrown");
+      //   });
+
+      //   document.getElementById("btn-5").addEventListener("click", function () {
+      //     $("body").css("background", "pink");
+      //   });
+
+      //   document.getElementById("btn-6").addEventListener("click", function () {
+      //     $("body").css("background", "black");
+      //   });
+
+      //   document.getElementById("btn-7").addEventListener("click", function () {
+      //     $("body").css("background", "green");
+      //   });
+
+      //   document.getElementById("btn-8").addEventListener("click", function () {
+      //     $("body").css("background", "yellow");
+      //   });
+
+      //   document.getElementById("btn-9").addEventListener("click", function () {
+      //     $("body").css("background", "greenyellow");
+      //   });
+
+      //   document.getElementById("btn-10").addEventListener("click", function () {
+      //     $("body").css("background", "grey");
+      //   });
+    </script>
+  </body>
+</html>
