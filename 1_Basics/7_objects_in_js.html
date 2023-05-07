@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      /*
+
+      There are different ways to create new objects
+      ----------------------------------------------
+
+        > Object Literal
+        > Object Constructor
+        > Object.create()
+        > class(ES6 2015)
+
+        */
+
+      //     name:"Piumika"
+
+      //     name --> key
+      //     "PIumika --> value
+      //     name:"Piumika" --> key - value pair
+
+      //create object -- Object Literal
+      // ------------------------------------------------------------------------------------------------------------------
+      const x = {
+        id: 1,
+        name: "Piumika",
+        // we can create a object in the object
+        address: {
+          address_line_1: "Colombo",
+          address_line_2: "Kelaniya",
+        },
+        salary: 25000,
+        //we can create function in the object
+        calcPass: function () {
+          console.log("Hellooo");
+        },
+      };
+
+      //get values
+
+      console.log("id: " + x.id); //1
+      console.log("name: " + x.name); //Piumika
+      console.log("address: " + x.address.address_line_1); //Colombo
+
+      //add key-values
+
+      x["age"] = 22;
+      x.country = "Srilanka";
+      x.address.street = "Flower road";
+
+      console.log(x.age);
+      console.log(x.country);
+      console.log(x.address);
+
+      //update value
+
+      x["age"] = 25;
+      x.country = "India";
+
+      console.log(x.country);
+      console.log(x.age);
+
+      //we added _ for private
+      const y = {
+        _id: 1,
+        _name: "Piumika",
+        _address: {
+          address_line_1: "Colombo",
+          address_line_2: "Kelaniya",
+        },
+        salary: 25000,
+        calcPass: function () {
+          console.log("Hellooo");
+        },
+        // getter function for access private variables
+        get name() {
+          return this._name;
+        },
+
+        // setter function for access private variables
+        set name(name) {
+          this._name = name;
+        },
+      };
+
+      y.name; //getter res: Piumika
+      y.name("Dilshan"); //setter res: err
+      y.name = "Dilshan"; //setter res: Dilshan
+
+      ///////////////////////////////////////////////////////////////////////////////////////////////////////
+      // 02) Object constructor
+      // ----------------------
+
+      function Customer(name, age, salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+      }
+
+      const customer = new Customer("Jaye", 25, 25000);
+
+      ////////////////////////////////////////////////////////////////////////////////////////////////////
+      // 03) Object Create()
+      // -------------------
+
+      const newCustomer = Object.create(customer); //Customer{}
+
+      //////////////////////////////////////////////////////////////////////////////////////////////////
+      // 04) class
+      // ---------
+
+      class myClass {
+        constructor(name, age, salary) {
+          this._name = name;
+          this._age = age;
+          this._salary = salary;
+        }
+        get name() {
+          return this._name;
+        }
+        set name(name) {
+          this._name = name;
+        }
+      }
+
+      let myClassObj = new myClass("Piumika", 25, 20000);
+
+      //delete key-value
+      delete x["_name"]
+    </script>
+  </body>
+</html>
